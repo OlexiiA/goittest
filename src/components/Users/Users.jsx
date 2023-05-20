@@ -37,9 +37,9 @@ export const Users = () => {
 
   const filterUsers = (users) => {
     switch (filter) {
-      case "follow":
-        return users.filter(({ id }) => followedUsers[id]);
       case "followings":
+        return users.filter(({ id }) => followedUsers[id]);
+      case "follow":
         return users.filter(({ id }) => !followedUsers[id]);
       default:
         return users;
